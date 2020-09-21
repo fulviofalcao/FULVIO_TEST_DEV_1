@@ -1,0 +1,31 @@
+<style>
+  button {
+    margin: 1% 0 0 1%;
+    padding: 0.2%;
+  }
+  table {
+    margin: 1% 0 0 1%;
+  }
+  th, td {
+    border-bottom: 1px solid #ddd;
+  }
+</style>
+
+<button (click)="findCompaniesData()" id="request">Get Companies</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Segment</th>
+      <th>Standard Deviation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let company of companies">
+      <td>{{ company.name }}</td>
+      <td>{{ company.segment }}</td>
+      <td>{{ company.sd }}</td>
+    </tr>
+  </tbody>
+</table>
